@@ -31,28 +31,28 @@ public class ContactSvcTest {
 
 	@Before
 	public void setUp() {
-		// Process mock annotations and inject the mock VideoRepository
-		// into the VideoSvc object
+		// Process mock annotations and inject the mock ContactRepository
+		// into the ContactSvc object
 		MockitoAnnotations.initMocks(this);
 
-		// Tell the mock VideoRepository to always return the random Video
-		// object that we create above when its getVideos() method is called
+		// Tell the mock ContactRepository to always return the random Contact
+		// object that we create above when its getContactList() method is called
 		when(contactRepository.findAll()).thenReturn(Arrays.asList(contact));
 	}
 	
 	
-	// Yes, this test doesn't do much because VideoSvc is
-	// essentially delegating to VideoRepository. The goal is to
+	// Yes, this test doesn't do much because ContactSvc is
+	// essentially delegating to ContactRepository. The goal is to
 	// provide a simple example of testing controllers with mock
 	// objects and dependency injection.
 	@Test
 	public void testVideoAddAndList() throws Exception {
 
-		// Ensure that calling addVideo works
+		// Ensure that calling addContact works
 		boolean ok = contactService.addContact(contact);
 		assertTrue(ok);
 
-		// Make sure that the Video we added is in the list
+		// Make sure that the Contact we added is in the list
 		Collection<Contact> contacts = contactService.getContactList();
 		assertTrue(contacts.contains(contact));
 	}
