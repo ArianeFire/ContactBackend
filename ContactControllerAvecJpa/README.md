@@ -1,4 +1,4 @@
-## Running the Service Service Application
+## Running the Contact Service Application
 
 To run the application:
 
