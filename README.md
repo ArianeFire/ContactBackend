@@ -1,13 +1,15 @@
 # ContactBackend
 
-The project consists of a share of 4 paquettages containing code sources namely:
+This project is based on SpringBoot J2EE technology, it implement a simple Contact Application Backend for pratice purpose.
 
--com.ensao.mobilecloud.contact: contains the entry point of the application (Application.java), which will allow to configure the web container, discover the controller, connect the controller to the dispatcher.
+The project consists of 4 package containing code sources namely:
 
--com.ensao.mobilecloud.contact.client: it contains the service implementer, it is essentially interfaces for adding and contact recovery. This class also contains annotations of the Retrofit library allowing access to client-side contact service. (The latter will be used to test the service).
+1- _com.ensao.mobilecloud.contact_ : contains the entry point of the application (Application.java), which will allow to configure the web container, discover the controller, connect the controller to the dispatcher.
 
--com.ensao.mobilecloud.contact.controller: it contains the controller that intercept queries and perform actions consequences.
+2- _com.ensao.mobilecloud.contact.client_ : it contains the services to implement, it is essentially interfaces for adding and recover Contact Information. This class also contains annotations of the Retrofit library allowing access to client-side contact service. (The latter will be used to test the service).
 
--com.ensao.mobilecloud.contact.repository: this contains the deposits, an interface for communication with the database using JPA.
+3- _com.ensao.mobilecloud.contact.controller_ : it contains the controller that intercept queries and perform actions consequences.
+
+4- _com.ensao.mobilecloud.contact.repository_ : this contains the deposits, an interface for communication with the database using JPA.
 
 And secondly we have a test folder.
